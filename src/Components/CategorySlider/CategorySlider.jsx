@@ -13,6 +13,13 @@ import './style.css';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 export default function App() {
+
+  const CategoryData = [
+    { "url": "./images/category/kerem.png", "text": "محصولات سلولوزی", "searchWord": "محصولات سلولزی" },
+    { "url": "./images/category/oil.png", "text": "آجیل و خشک بار", "searchWord": "آجیل" },
+    { "url": "./images/category/snacks.png", "text": "تنقلات", "searchWord": "تنقلات" }
+  ]
+  
   return (
     <>
       <div className='custome-container'>
@@ -50,15 +57,13 @@ export default function App() {
           modules={[Autoplay, Pagination]}
           className="mySwiper mt-5"
         >
-          <SwiperSlide>
-            <ProductCategory url="./images/category/kerem.png" text="محصولات سلولزی" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCategory url="./images/category/oil.png" text="آجیل و خشک بار" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCategory url="./images/category/rice.png" text="محصولات سلولزی" />
-          </SwiperSlide>
+          {
+            CategoryData.map((data, index) => (
+              <SwiperSlide key={index}>
+                <ProductCategory url={data.url} text={data.text} />
+              </SwiperSlide>
+            ))
+          }
           <SwiperSlide>
             <ProductCategory url="./images/category/snacks.png" text="تنقلات" />
           </SwiperSlide>

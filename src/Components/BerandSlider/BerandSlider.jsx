@@ -12,7 +12,18 @@ import './style.css';
 // import required modules
 import { FreeMode, Autoplay } from 'swiper/modules';
 
+
 export default function App() {
+    const brandData = [
+        { "url": "./images/brands/active.png", "name": "product" },
+        { "url": "./images/brands/latifeh.png", "name": "product" },
+        { "url": "./images/brands/elit.png.webp", "name": "product" },
+        { "url": "./images/brands/chitoze.webp", "name": "product" },
+        { "url": "./images/brands/par.png", "name": "product" },
+        { "url": "./images/brands/zar.jpg", "name": "product" },
+        { "url": "./images/brands/nescafe.png", "name": "product" },
+        { "url": "./images/brands/kaleh.jpg", "name": "product" },
+    ]
     return (
         <>
             <div className='custome-container  my-5 '>
@@ -63,38 +74,14 @@ export default function App() {
                         modules={[Autoplay, FreeMode]}
                         className="mySwiper mt-5"
                     >
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2]' src="./images/brands/active.png" alt="product" />
-                        </SwiperSlide>
 
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/latifeh.png" alt="product" />
-                        </SwiperSlide>
-
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/elit.png.webp" alt="product" />
-                        </SwiperSlide>
-
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/chitoze.webp" alt="product" />
-                        </SwiperSlide>
-
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/par.png" alt="product" />
-                        </SwiperSlide>
-
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/zar.jpg" alt="product" />
-                        </SwiperSlide>
-
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/nescafe.png" alt="product" />
-                        </SwiperSlide>
-
-                        <SwiperSlide >
-                            <img className='object-contain aspect-[3/2] w-[30px]' src="./images/brands/kaleh.jpg" alt="product" />
-                        </SwiperSlide>
-
+                        {
+                            brandData.map((data, index) => (
+                                <SwiperSlide key={index} >
+                                    <img className='object-contain aspect-[3/2]' src={data.url} alt={data.name} />
+                                </SwiperSlide>
+                            ))
+                        }
                     </Swiper>
                 </div>
             </div>
