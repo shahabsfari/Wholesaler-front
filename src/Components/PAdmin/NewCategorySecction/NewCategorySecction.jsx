@@ -29,7 +29,7 @@ export default function NewCategorySecction() {
                     <span className='font-Dana text-white items-center flex justify-center '>{imageCategori}</span>
                 </div>
             </div>
-            <div className=' px-5 py-3  ' >
+            <div className=' px-6 py-3  ' >
                 <button className='w-full transition-all duration-300 hover:bg-green-700 rounded-md h-9 font-DanaMedium text-base bg-green-300' >
                     ثبت
                 </button>
