@@ -1,0 +1,16 @@
+.swal2-title{
+    @apply font-DanaDemiBold
+}
+.swal2-content{
+    @apply font-DanaDemiBold
+}
+.swal2-container{
+    @apply font-DanaDemiBold
+}
+.swal2-confirm , .swal2-cancel{
+    @apply font-DanaDemiBold
+}
+.swal2-validation-message{
+    background-color: #30336b;
+    color: white;
+}
